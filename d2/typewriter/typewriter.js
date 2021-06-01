@@ -1,13 +1,12 @@
-const sentence = "hello there from lighthouse labs";
-
-timeOut = sentence.length;
-let time = 0
-  for(const value of sentence){
+const typewriter = (str) => {
+  let time = 1000;
+  for(let value of str){
     setTimeout(() => {
     process.stdout.write(value);
-    time +=500;
-    },timeOut);
+    },time)
+    time += 300;
   }
-setTimeout(() => {
-  console.log("");
-}, 50 * timeOut);
+  };
+
+  const sentence = "Hello there from lighthouse labs";
+  typewriter(sentence);
