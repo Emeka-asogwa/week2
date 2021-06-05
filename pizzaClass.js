@@ -3,7 +3,23 @@ class Pizza {
   constructor(size,crust) {
     this.size = size;
     this.crust = crust;
-    this.toppings = ["cheese"];
+    this.toppings = ["cheese", 'beef','chicken'];
+  }
+  set size(size){
+    if (size === 's' || size === 'm' || size === 'l'){
+      this._size = size;
+    }
+    else{
+      return 'Invalid size';
+    }
+  }
+  getSize() {
+    return this.size;
+  }
+  get price(){
+    const basePrice = 10;
+    const toppingPrice = 2;
+    return basePrice + (this.toppings.length * toppingPrice);
   }
 
   addTopping(topping) {
@@ -31,7 +47,10 @@ console.log(pizza2.toppings);
 pizza2.addTopping("more cheese");
 console.log(pizza2.toppings);
 
-let pizza = new Pizza('large', 'thin');
+let pizza = new Pizza();
+pizza.size = 's';
+//pizza.getSize();
+//console.log(pizza.getPrice());
 
 class Person {
   // moved here b/c it was identical
