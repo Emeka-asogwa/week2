@@ -2,8 +2,9 @@ const net = require('net');
 const stdin = process.stdin;
 stdin.setEncoding('utf8');
 const client = net.createConnection({
-  port: 3001,
-  host: '135.23.222.131'}, () => {
+  password:192374,
+  port: 50542,
+  host: '135.23.223.133'}, () => {
   console.log("Connection established!");
 })
 client.setEncoding('utf8');
