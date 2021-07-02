@@ -3,8 +3,8 @@ const stdin = process.stdin;
 stdin.setEncoding('utf8');
 const client = net.createConnection({
   password:192374,
-  port: 50542,
-  host: '135.23.223.133'}, () => {
+  port: 3000,
+  host: 'localhost'}, () => {
   console.log("Connection established!");
 })
 client.setEncoding('utf8');
